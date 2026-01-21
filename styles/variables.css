@@ -6,6 +6,7 @@
   --color-blue-800: hsl(234, 29%, 20%);
   --color-blue-700: hsl(235, 18%, 26%);
   --color-red: hsl(4, 100%, 67%);
+  --color-red-light: hsl(3, 71.43%, 94.51%);
 
   --color-gradient: linear-gradient(
     to right,

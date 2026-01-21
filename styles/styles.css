@@ -7,12 +7,30 @@
   font-family: var(--font-family);
 }
 
-.html, body {
+html, body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+body {
   background-color: var(--color-blue-800);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-family);
 }
 
 .container {
   background-color: var(--color-white);
+  width: 100%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .form__image-wrapper {
@@ -102,13 +120,19 @@
   border: 1px solid var(--color-grey);
   border-radius: 8px;
   margin-bottom: 24px;
+  width: 100%;
 
   &::placeholder {
     color: var(--color-grey);
   }
 }
 
-.form__button {
+.form__input--error {
+  border: 1px solid var(--color-red);
+  background-color: var(--color-red-light);
+}
+
+.button {
   padding: 16px 40px;
   font-size: 16px;
   font-weight: var(--font-weight-bold);
@@ -118,15 +142,51 @@
   border: 1px solid var(--color-blue-800);
   border-radius: 8px;
   cursor: pointer;
+  width: 100%;
+
+  &:active {
+    background: var(--color-gradient);
+    border: none;
+  }
+
+  &:hover {
+    background: var(--color-gradient);
+    border: none;
+  }
 }
 
 .hidden {
-  display: none;
+  display: none !important;
+}
+
+.success {
+  display: flex;
+  flex-direction: column;
+  padding: 140px 24px;
+  color: var(--color-blue-800);
+  height: 100vh;
+  justify-content: space-between;
+}
+
+.success__content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.success__icon {
+  width: 64px;
+  height: 64px;
+}
+
+.success__email {
+  font-weight: var(--font-weight-bold);
 }
 
 footer {
   background-color: var(--color-white);
   padding: 16px;
+  width: 100%;
 }
 
 .attribution {
@@ -144,10 +204,28 @@ footer {
   .container {
     display: flex;
     flex-direction: row;
+    width: 90%;
     max-width: 730px;
     margin: 80px auto;
     border-radius: 32px;
     overflow: hidden;
+  }
+
+  .container.container--success {
+    max-width: 504px;
+    max-height: 520px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .container--success .success {
+    height: auto;
+    padding: 64px;
+    justify-content: flex-start;
+  }
+  
+  .container--success .success__content {
+    margin-bottom: 40px;
   }
 
   .form {
@@ -179,6 +257,10 @@ footer {
   footer {
     background-color: var(--color-blue-800);
     padding: 16px;
+  }
+
+  .success__title {
+    font-size: 56px;
   }
 
   .attribution {
@@ -216,10 +298,5 @@ footer {
 
   .form__image--desktop {
     display: block;
-  }
-
-  footer {
-    margin: 0;
-    padding: 0;
   }
 }
