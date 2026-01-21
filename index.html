@@ -11,8 +11,10 @@
   <body>
     <main class="container">
       <section class="form">
-        <div class="form__image">
-          <img src="./assets/images/illustration-sign-up-mobile.svg" alt="Illustration sign up desktop">
+        <div class="form__image-wrapper">
+          <img class="form__image form__image--mobile" src="./assets/images/illustration-sign-up-mobile.svg" alt="Illustration sign up mobile">
+          <img class="form__image form__image--tablet" src="./assets/images/illustration-sign-up-tablet.svg" alt="Illustration sign up tablet">
+          <img class="form__image form__image--desktop" src="./assets/images/illustration-sign-up-desktop.svg" alt="Illustration sign up desktop">
         </div>
         <div class="form__content">
           <h1 class="form__title">Stay updated!</h1>
@@ -31,21 +33,26 @@
               <p class="form__list-text">And much more!</p>
             </li>
           </ul>
-
-          <label class="form__label" for="email">Email address</label>
+          <div class="form__field">
+            <label class="form__label" for="email">Email address</label>
+            <p class="form__error" id="email-error">Valid email required</p>
+          </div>
           <input class="form__input" type="email" id="email" name="email" placeholder="email@company.com" required>
           <button class="form__button" type="submit">Subscribe to monthly newsletter</button>
         </div>
       </section>
       <section class="success hidden">
+        <img class="success__icon" src="./assets/images/icon-success.svg" alt="Icon success">
         <h1 class="success__title">Thanks for subscribing!</h1>
         <p class="success__description">…</p>
         <button class="success__button">Dismiss message</button>
       </section>
     </main>
-    <div class="attribution">
+    <footer>
+      <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://github.com/arne-witteler">Arne Witteler</a>.
-  </div>
+  </footer>
+    </div>
   </body>
 </html>
