@@ -33,19 +33,23 @@
               <p class="form__list-text">And much more!</p>
             </li>
           </ul>
-          <div class="form__field">
-            <label class="form__label" for="email">Email address</label>
-            <p class="form__error" id="email-error">Valid email required</p>
-          </div>
-          <input class="form__input" type="email" id="email" name="email" placeholder="email@company.com" required>
-          <button class="form__button" type="submit">Subscribe to monthly newsletter</button>
+          <form class="form__form" novalidate>
+            <div class="form__field">
+              <label class="form__label" for="email">Email address</label>
+              <p class="form__error" id="email-error">Valid email required</p>
+            </div>
+            <input class="form__input" type="email" id="email" name="email" placeholder="email@company.com" required>
+            <button class="button form__button" type="submit">Subscribe to monthly newsletter</button>
+          </form>
         </div>
       </section>
       <section class="success hidden">
-        <img class="success__icon" src="./assets/images/icon-success.svg" alt="Icon success">
-        <h1 class="success__title">Thanks for subscribing!</h1>
-        <p class="success__description">…</p>
-        <button class="success__button">Dismiss message</button>
+        <div class="success__content">
+          <img class="success__icon" src="./assets/images/icon-success.svg" alt="Icon success">
+          <h1 class="success__title">Thanks for subscribing!</h1>
+          <p class="success__description">A confirmation email has been sent to <span class="success__email"></span>. Please open it and click the button inside to confirm your subscription</p>
+        </div>
+        <button class="button success__button">Dismiss message</button>
       </section>
     </main>
     <footer>
